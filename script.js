@@ -111,3 +111,4 @@ $("#add").on("click", function(event){
     console.log(players)
     $("#player-name").val("")
 })
+
