@@ -155,5 +155,10 @@ $("#next").on("click", function(event){
         questionNumber++
         startGame() 
     }
-    
+});
+
+$("#anything").on("click", function(event){
+    event.preventDefault()
+    $("#category").text("Anything!")
+    $("#description").text("Anything you are thankful for!")
 });
