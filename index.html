@@ -9,8 +9,11 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="text-center">Thankfulness</h1>
-        <div id="instructions">
+        <div class="jumbotron text-center jumbotron-fluid">
+            <h1>Thankfulness</h1>
+            <p class="lead">A game of reflection and gratitude.</p>
+        </div>
+        <div class="part" id="instructions">
             <h2 class= "my-3">How to play:</h2>
             <ul>
                 <li>Enter the names of all of the players in your group.</li>
@@ -31,14 +34,20 @@
                 <button id="start" type="button" class="btn btn-lg btn-success">Start</button>
             </div>
         </div>
-        <div class="hidden" id="games">
-            <h2 id="category"></h2>
-            <h3><span id="player-up"></span> is thankful for...</h3>
-            <p id="description"></p>
-            <button id="anything" type="button" class="btn btn-warning">Anything!</button>
-            <button id="next" type="button" class="btn btn-primary">Next</button>
+        <div class="part hidden" id="games">
+            <div class="text-center card">
+                <h1 class="card-header" id="category">
+                  Featured
+                </h1>
+                <div class="card-body">
+                  <h3><span id="player-up"></span> is thankful for...</h3>
+                  <p id="description"></p>
+                  <button id="anything" type="button" class="btn btn-warning">Anything!</button>
+                  <button id="next" type="button" class="btn btn-primary">Next</button>
+                </div>
+              </div>
         </div> 
-        <div class="hidden" id="ending">
+        <div class="part hidden text-center" id="ending">
             <h2>We are thankful for YOU!</h2>
             <button id="again" type="button" class="btn btn-primary">Play Again</button>
         </div> 
