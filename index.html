@@ -9,25 +9,32 @@
 <body>
     <div class="container">
         <h1 class="text-center">Thankfulness</h1>
-        <h2 class= "my-3">How to play:</h2>
-        <ul>
-            <li>Enter the names of all of the players in your group.</li>
-            <li>When you are finished with entering the players hit "Start".</li>
-            <li>The game will randomly pick one player and one gratitude category.</li>
-            <li>The player must name one thing in that category that they are thankful for.</li>
-            <li>If the player cannot come up with something in that category, they can use their "Anything" option. In this case, the player can name anything that they are greatful for. Each player has one "Anything" option per game.</li>
-            <li>When a player completes their turn, hit "Next" and repeat.</li>
-        </ul>
-        <form>
-            <div class="form-group">
-              <label for="player-name">Enter the names of your players:</label>
-              <input type="text" class="form-control" id="player-name">
+        <div id="instructions">
+            <h2 class= "my-3">How to play:</h2>
+            <ul>
+                <li>Enter the names of all of the players in your group.</li>
+                <li>When you are finished with entering the players hit "Start".</li>
+                <li>The game will randomly pick one player and one gratitude category.</li>
+                <li>The player must name one thing in that category that they are thankful for.</li>
+                <li>If the player cannot come up with something in that category, they can use their "Anything" option. In this case, the player can name anything that they are greatful for. Each player has one "Anything" option per game.</li>
+                <li>When a player completes their turn, hit "Next" and repeat.</li>
+            </ul>
+            <form>
+                <div class="form-group">
+                <label for="player-name">Enter the names of your players:</label>
+                <input type="text" class="form-control" id="player-name">
+                </div>
+                <button id="add" type="submit" class="btn btn-primary">Add</button>  
+            </form>
+            <div class="text-center">
+                <button type="button" class="btn btn-lg btn-success">Start</button>
             </div>
-            <button id="add" type="submit" class="btn btn-primary">Add</button>  
-        </form>
-        <div class="text-center">
-            <button type="button" class="btn btn-lg btn-success">Start</button>
         </div>
+        <div id="games">
+            <h2 id="category"></h2>
+            <h3><span id="player-up"></span> is thankful for...</h3>
+            <p id="description"></p>
+        </div> 
     </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
