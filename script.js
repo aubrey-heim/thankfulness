@@ -142,3 +142,8 @@ function startGame(){
     $("#category").text(prompts[questionNumber].category)
     $("#description").text(prompts[questionNumber].description)
 }
+
+$("#start").on("click", function(event){
+    event.preventDefault()
+    startGame()
+});
