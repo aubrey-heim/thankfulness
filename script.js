@@ -101,6 +101,23 @@ const prompts = [
         description:"a special time when someone showed you kindness"
     },
 ]
+var shuffled = shuffle(prompts)
+
+function shuffle(arr){
+    //looping through the array, starting at the last value
+    for (var i = arr.length - 1; i > 0; i--) {    
+        //choosing a random number between 0 and the length of the array
+        var j = Math.floor(Math.random() * (i + 1)); 
+        //creating a variable which gets the last item of the array
+        var selected = arr[i]; 
+        // making the last item of the array the randomly selected array value
+        arr[i] = arr[j]; 
+        //moving the value that was initially the last value of the array to the position of the randomly selected value
+        arr[j] = selected; 
+    }
+    //returing the shuffled array for use outside of the function     
+    return arr; 
+}
 
 $("#add").on("click", function(event){
     //prevents browser trying to submit form
