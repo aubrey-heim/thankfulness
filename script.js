@@ -147,3 +147,12 @@ $("#start").on("click", function(event){
     event.preventDefault()
     startGame()
 });
+
+$("#next").on("click", function(event){
+    event.preventDefault()
+    if (questionNumber<25){
+        questionNumber++
+        startGame() 
+    }
+    
+});
