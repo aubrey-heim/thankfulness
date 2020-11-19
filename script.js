@@ -101,15 +101,17 @@ const prompts = [
         description:"a special time when someone showed you kindness"
     },
 ]
-var shuffled = shuffle(prompts)
+let shuffled = shuffle(prompts)
+let playerUp =""
+let questionNumber = 0
 
 function shuffle(arr){
     //looping through the array, starting at the last value
-    for (var i = arr.length - 1; i > 0; i--) {    
+    for (let i = arr.length - 1; i > 0; i--) {    
         //choosing a random number between 0 and the length of the array
-        var j = Math.floor(Math.random() * (i + 1)); 
+        let j = Math.floor(Math.random() * (i + 1)); 
         //creating a variable which gets the last item of the array
-        var selected = arr[i]; 
+        let selected = arr[i]; 
         // making the last item of the array the randomly selected array value
         arr[i] = arr[j]; 
         //moving the value that was initially the last value of the array to the position of the randomly selected value
@@ -125,11 +127,18 @@ $("#add").on("click", function(event){
     //selecting the text typed into the textArea next to the save button
     let inputText = $("#player-name").val()
     players.push(inputText)
-    console.log(players)
     $("#player-name").val("")
 })
 
 function pickPlayer(arr){
-    var random = Math.floor(Math.random() * (arr.length + 1)); 
-    var playerUp = arr[random];
+    let random = Math.floor(Math.random() * (arr.length + 1)); 
+    playerUp = arr[random];
+}
+
+function startGame(){
+    $("#games").removeClass("hidden")
+    pickPlayer(players)
+    $("#player-up").text(playerUp)
+    $("#category").text(prompts[questionNumber].category)
+    $("#description").text(prompts[questionNumber].description)
 }
