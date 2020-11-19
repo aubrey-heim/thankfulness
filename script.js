@@ -154,6 +154,9 @@ $("#next").on("click", function(event){
     if (questionNumber<25){
         questionNumber++
         startGame() 
+    } else {
+        $("#games").addClass("hidden")
+        $("#ending").removeClass("hidden")
     }
 });
 
@@ -161,4 +164,9 @@ $("#anything").on("click", function(event){
     event.preventDefault()
     $("#category").text("Anything!")
     $("#description").text("Anything you are thankful for!")
+});
+
+$("#again").on("click", function(event){
+    event.preventDefault()
+    location.reload()
 });
