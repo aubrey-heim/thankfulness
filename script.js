@@ -129,3 +129,7 @@ $("#add").on("click", function(event){
     $("#player-name").val("")
 })
 
+function pickPlayer(arr){
+    var random = Math.floor(Math.random() * (arr.length + 1)); 
+    var playerUp = arr[random];
+}
