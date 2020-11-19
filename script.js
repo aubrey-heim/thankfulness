@@ -137,6 +137,7 @@ function pickPlayer(arr){
 
 function startGame(){
     $("#games").removeClass("hidden")
+    $("#instructions").addClass("hidden")
     pickPlayer(players)
     $("#player-up").text(playerUp)
     $("#category").text(prompts[questionNumber].category)
