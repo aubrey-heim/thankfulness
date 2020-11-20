@@ -3,23 +3,27 @@
 }
 
 body {
-    background-image: url("https://images.pexels.com/photos/1379636/pexels-photo-1379636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image: url("https://images.pexels.com/photos/3369215/pexels-photo-3369215.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: 'Oswald', sans-serif;
+    color:black;
 }
 
-.jumbotron{
-    color: #060C0C;
-    background-color: #A8671F;
+#title{
+    background: none;
+    font-family: 'Lobster', cursive;
+    color: #B60A1B;
+    background-color: white;
+    padding: 20px;
     opacity: 80%;
 }
 
 .part{
-    color: #060C0C;
-    background-color: #A8671F;
-    opacity: 80%;
+    background-color: white;
     padding: 20px;
+    opacity: 80%;
 }
 
 #add{
