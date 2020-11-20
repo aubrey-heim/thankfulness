@@ -127,6 +127,7 @@ $("#add").on("click", function(event){
     //selecting the text typed into the textArea next to the save button
     let inputText = $("#player-name").val()
     players.push(inputText)
+    $("#player-list").append($("<li>").text(inputText).addClass("list-group-item"))
     $("#player-name").val("")
 })
 

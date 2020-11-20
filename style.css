@@ -25,11 +25,13 @@ body {
 #add{
     background-color: #007061;
     border: none;
+    width: 100%;
 }
 
 #start{
     background-color: #B60A1B;
     border: none;
+    width: 100%;
 }
 
 #next{
@@ -46,4 +48,10 @@ body {
 #again{
     background-color: #007061;
     border: none;
+}
+
+.card{
+    background-color: grey;
+    color:black;
+    padding-bottom: 20px;
 }

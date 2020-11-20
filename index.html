@@ -23,16 +23,33 @@
                 <li>If the player cannot come up with something in that category, they can use their "Anything" option. In this case, the player can name anything that they are greatful for. Each player has one "Anything" option per game.</li>
                 <li>When a player completes their turn, hit "Next" and repeat.</li>
             </ul>
-            <form>
-                <div class="form-group">
-                <label for="player-name">Enter the names of your players:</label>
-                <input type="text" class="form-control" id="player-name">
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                        <label for="player-name">Enter the names of your players:</label>
+                        <input type="text" class="form-control" id="player-name">
+                        </div>
+                        <button id="add" type="submit" class="btn mb-3 btn-primary">Add</button>  
+                    </form>
+                    <div class="text-center">
+                        <button id="start" type="button" class="btn btn-success">Start</button>
+                    </div>
                 </div>
-                <button id="add" type="submit" class="btn btn-primary">Add</button>  
-            </form>
-            <div class="text-center">
-                <button id="start" type="button" class="btn btn-lg btn-success">Start</button>
+                    <div class="col-md-6 card">
+                        <div class="card-header">
+                        Players
+                        </div>
+                        <ul id="player-list" class="list-group list-group-flush">
+                    
+                        </ul>
+                    </div>
+
             </div>
+            
+            
+            
+            
         </div>
         <div class="part hidden" id="games">
             <div class="text-center card">
