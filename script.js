@@ -136,7 +136,7 @@ $("#add").on("click", function(event){
 })
 
 function pickPlayer(arr){
-    let random = Math.floor(Math.random() * (arr.length + 1)); 
+    let random = Math.floor(Math.random() * (arr.length)); 
     playerUp = arr[random];
 }
 
@@ -144,7 +144,7 @@ function startGame(){
     $("#games").removeClass("hidden")
     $("#instructions").addClass("hidden")
     pickPlayer(players)
-    $("#player-up").text(playerUp)
+    $("#thankful").text(playerUp + " is thankful for...")
     $("#category").text(prompts[questionNumber].category)
     $("#description").text(prompts[questionNumber].description)
 
