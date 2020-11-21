@@ -102,8 +102,12 @@ const prompts = [
     },
 ]
 let shuffled = shuffle(prompts)
-let playerUp =""
+let playerUp;
 let questionNumber = 0
+let timeSelected;
+let timeLeft;
+let timedGame = false;
+let intervalSet;
 
 function shuffle(arr){
     //looping through the array, starting at the last value
@@ -143,18 +147,42 @@ function startGame(){
     $("#player-up").text(playerUp)
     $("#category").text(prompts[questionNumber].category)
     $("#description").text(prompts[questionNumber].description)
+
+}
+
+function timer() {
+        //setting the timer text content to the time that is left
+        $("#timer").text(timeLeft)
+        if (timeLeft === 0) {
+            $("#category").text("Times up!")
+            $("#description").text("")
+            $("#thankful").text("")
+            $("#timer").text(0)
+            clearInterval(intervalSet)
+        }else {
+            timeLeft--
+        };
 }
 
 $("#start").on("click", function(event){
     event.preventDefault()
     startGame()
+    timeLeft = timeSelected
+    if (timedGame === true){
+        intervalSet = setInterval(timer, 1000)
+    }
 });
 
 $("#next").on("click", function(event){
     event.preventDefault()
     if (questionNumber<25){
         questionNumber++
-        startGame() 
+        timeLeft = timeSelected
+        if (timedGame === true){
+            clearInterval(intervalSet)
+            intervalSet = setInterval(timer, 1000)
+        }
+        startGame()
     } else {
         $("#games").addClass("hidden")
         $("#ending").removeClass("hidden")
@@ -165,9 +193,39 @@ $("#anything").on("click", function(event){
     event.preventDefault()
     $("#category").text("Anything!")
     $("#description").text("Anything you are thankful for!")
+    timeLeft = timeSelected
+    if (timedGame === true){
+        clearInterval(intervalSet)
+        intervalSet = setInterval(timer, 1000)
+    }
 });
 
 $("#again").on("click", function(event){
     event.preventDefault()
     location.reload()
 });
+
+$("#limit").on("change", function(event){
+    event.preventDefault()
+    if($(this).is(':checked')){
+        $("#time-limit").removeClass("hidden")
+    } else {
+        $("#time-limit").addClass("hidden")
+        timedGame=false
+    }
+})
+
+$("#time-limit").on("change", function(event){
+    if($(this).val()==="10 seconds"){
+        timeSelected = 10
+    } else if($(this).val()==="20 seconds"){
+        timeSelected = 20
+    } else if($(this).val()==="30 seconds"){
+        timeSelected = 30
+    } else if($(this).val()==="45 seconds"){
+        timeSelected = 45
+    } else if($(this).val()==="60 seconds"){
+        timeSelected = 60
+    }
+    timedGame=true
+})
