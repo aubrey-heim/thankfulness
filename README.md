@@ -29,7 +29,7 @@ Contributions to this project are welcome!
 
 Also feel free to open issues for the project.
 
-## Acknowledgements
+## Acknowledgments
 Based on the card game by Marie Marchand: https://www.cwu.edu/hr/gratitude
 
 ## Questions
