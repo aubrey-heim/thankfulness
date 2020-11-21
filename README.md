@@ -5,6 +5,7 @@
 * [Usage](#usage)
 * [License](#license)
 * [Contributing](#contributing)
+* [Acknowledgments](#acknowledgments)
 * [Questions](#questions)
     
 ## Description
@@ -27,6 +28,9 @@ Contributions to this project are welcome!
 </ol>
 
 Also feel free to open issues for the project.
+
+## Acknowledgments
+Based on the card game by Marie Marchand: https://www.cwu.edu/hr/gratitude
 
 ## Questions
 If you have any questions, please contact Aubrey Heim.
